@@ -113,13 +113,13 @@ function PrintDL(level) {
 
 // 입력 값에 따른 일정을 출력하기 위해 입력 값을 문자열로 변환해주는 함수
 function ChangeInput() {
-  if (vaccineInput == true) {
+  if (vaccineInput == "true") {
     vaccineInput = " 맞으셨습니다."
   }
   else {
     vaccineInput = " 맞지 않으셨습니다."
   }
-  if (symptomsInput == false) {
+  if (symptomsInput == "false") {
     symptomsInput = " 없습니다."
   }
   else {
