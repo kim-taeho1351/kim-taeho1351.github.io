@@ -1,0 +1,244 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  font-family: '굴림', sans-serif;
+  font-weight: bold;
+}
+
+hr {
+  background-color: deepskyblue;
+  height: 2px;
+  border: hidden;
+}
+
+.FL {
+  float: left;
+}
+
+.header {
+  width: 100%;
+  height: 15%;
+  background-color: deepskyblue;
+}
+
+#header {
+  color: gold;
+}
+
+.section1 {
+  width: 80%;
+  /* height: 40%; */
+  float: left;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: floralwhite;
+}
+
+.section2 {
+  width: 80%;
+  /* height: 40%; */
+  float: left;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: floralwhite;
+}
+
+.footer {
+  width: 100%;
+  /* height: 10%; */
+  clear: both;
+  background-color: deepskyblue;
+  color: rgb(39, 39, 39);
+}
+
+#header {
+  margin: 0%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#NowDate {
+  margin: 0%;
+  float: left;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#InfecteeNum {
+  margin-left: 5px;
+  margin-right: 5px;
+  float: left;
+}
+
+#SectionTitle {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.RedText {
+  color: red;
+}
+
+#SectionSubTitle {
+  text-align: center;
+  font-size: 15px;
+}
+
+.FormBox {
+  border-color: deepskyblue;
+  border-width: 2px;
+  border-radius: 2px;
+}
+
+.DateArea {
+  display: block;
+  font-size: 20px;
+  margin-left: 38%;
+}
+
+.LocateArea {
+  display: block;
+  font-size: 20px;
+  margin-left: 30.5%;
+}
+
+.PNArea {
+  display: block;
+  font-size: 20px;
+  margin-left: 36%;
+}
+
+.VaccineArea {
+  display: block;
+  font-size: 20px;
+  margin-left: 36%;
+}
+
+#Vaccine {
+  position: relative;
+  top: 3px;
+  zoom: 2;
+}
+
+.DistanceArea {
+  display: block;
+  font-size: 20px;
+  margin-left: 36%;
+}
+
+.SymptomsArea {
+  display: block;
+  font-size: 20px;
+  margin-left: 23%;
+}
+
+#Symptoms {
+  position: relative;
+  top: 8px;
+}
+
+.InputStyle {
+  /* float: left; */
+  margin-left: 10px;
+  font-size: 20px;
+  border: 2px solid deepskyblue;
+  border-radius: 10px;
+}
+
+#Distance {
+  float: left;
+  margin-right: 10px;
+}
+
+#DLNum {
+  font-weight: bold;
+  color: red;
+  margin-right: 10px;
+}
+
+.ButtonArea {
+  display: block;
+  margin-left: 38%;
+}
+
+.CheckButton {
+  width: 40%;
+  height: 50px;
+  background-color: floralwhite;
+  color: darkblue;
+  border-color: deepskyblue;
+  border-width: 2px;
+  border-radius: 20px;
+}
+
+.DLevel {
+  display: block;
+  text-align: center;
+  font-size: 45px;
+}
+
+.DLevel span {
+  background-color: lightskyblue;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#LinkImageBox {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  border: 3px solid red;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left: -3px;
+}
+
+#LinkImage {
+  width: 100%;
+  height: 100%;
+}
+
+#InformVideo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.scheduleInform {
+  margin: 0 14%;
+}
+
+.scheduleInform p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.scheduleInform span {
+  color: deepskyblue;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+#inform-dtlevel {
+  color: red;
+  cursor: pointer;
+}
+
+#DLimage {
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+#warning {
+  font-size: 20px;
+}
+
+#nowlocation {
+  text-align: center;
+}

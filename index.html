@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-Alert</title>
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <!-- <script src="index.js"></script> -->
+  <!-- 여기에 있어도 되는지 체크 -->
+</head>
+<body>
+  <header class="header">
+    <div id="header">COVID ALERT</div>
+    <div id="NowDate">현재 날짜: </div>
+    <div id="DateObj"></div>
+    <div id="InfecteeNum">감염자 수: </div>
+    <div id="InfecteeNumObj" class="RedText"></div>
+    <br>
+  </header>
+  <section class="section1">
+    <div id="SectionTitle">최고의 백신은 <span class="RedText">예방</span>입니다!</div>
+    <div id="SectionSubTitle">일정의 <span class="RedText">위험도</span>를 체크 해보세요!</div><br>
+    <div>
+      <form action="">
+        <fieldset class="FormBox">
+          <legend id="SectionTitle">일정 위험도 체크</legend>
+          <div class="DateArea">
+            <label for="ScheduleDate">날짜: </label><input type="date" class="InputStyle" id="ScheduleDate">
+          </div> <br>
+          <div class="LocateArea">
+            <label for="ScheduleLocate">지역(주요도시):</label><input type="text" list="cities" class="InputStyle" id="ScheduleLocate"><br>
+          </div>
+          <br>
+          <datalist id="cities">
+            <option value="서울"></option>
+            <option value="경기"></option>
+            <option value="인천"></option>
+            <option value="강원"></option>
+            <option value="충북"></option>
+            <option value="충남"></option>
+            <option value="경북"></option>
+            <option value="세종"></option>
+            <option value="대전"></option>
+            <option value="전북"></option>
+            <option value="전남"></option>
+            <option value="광주"></option>
+            <option value="경남"></option>
+            <option value="대구"></option>
+            <option value="울산"></option>
+            <option value="부산"></option>
+            <option value="제주"></option>
+            <option value="해외"></option>
+          </datalist>
+          <div class="PNArea">
+            <label for="PeopleNum">인원 수:</label><input type="number" min="1" step="1" id="PeopleNum" class="InputStyle">
+          </div>
+          <br>
+          <div class="VaccineArea">
+            <label for="Vaccine">백신 접종 여부:</label><input type="checkbox" class="InputStyle" id="Vaccine">
+          </div>
+          <br>
+          <div class="DistanceArea">
+            <div id="Distance">거리두기 단계:</div>
+            <div id="DLNum" class="FL">2</div><div> 단계</div>
+          </div>
+          <br>
+          <div class="SymptomsArea">
+            <label for="Symptoms">의심 증상:</label><textarea name="" id="Symptoms" class="InputStyle" placeholder="ex) 기침, 발열(없으시면 비워두세요)" cols="40" rows="1"></textarea>
+          </div>
+          <br>
+          <div class="ButtonArea">
+            <button class="CheckButton" onclick="GetInputs(event)">위험도 검사하기</button>
+          </div>
+        </fieldset>
+      </form> 
+    </div>
+    <br>
+    <div class="DLevelArea">
+      <div Class="DLevel"><span id="DLText" onclick="OpenInform()">위험도</span></div>
+    </div>
+    <br>
+    <hr>
+  </section>
+  <section class="section2">
+    <div id="SectionTitle">코로나19 정보 얻기</div> <br>
+    <div id="SectionSubTitle">코로나바이러스감염증-19(http://ncov.mohw.go.kr/)</div>
+    <a href="http://ncov.mohw.go.kr/" target="_blank">
+      <div id="LinkImageBox">
+        <img src="images/covid-19.png" alt="http://ncov.mohw.go.kr/" id="LinkImage">
+      </div>
+    </a>
+    <br>
+    <hr>
+    <br>
+    <div id="SectionTitle">코로나19 국민 행동 수칙 동영상</div> <br>
+    <iframe id="InformVideo" src="https://www.youtube.com/embed/ZFUnG41xJOY" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>비디오 출력 오류(코로나19국민행동수칙)</iframe>
+  </section>
+  <footer class="footer">
+    <div>제작자: 김태호</div>
+    <div>E-mail: ben108@naver.com</div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
