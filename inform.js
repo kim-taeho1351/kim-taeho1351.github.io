@@ -1,3 +1,5 @@
+// index.html에서 url형태로 넘어온 입력 값들을 inform.js의 변수에 저장한다.
+// 이때 숫자로 넘어온 것도 문자이기에 1을 곱해 정수로 바꿔준다.
 var temp = location.href.split("?");
 var data = temp[1].split(":");
 var distanceLevel = data[0]*1;
@@ -8,9 +10,12 @@ var vaccineInput = data[4];
 var dangerLevel = data[5]*1;
 var symptomsInput = data[6];
 
+// 받아온 지역 입력 값은 정수이기에 변환 함수를 호출하여 지역 string으로 변환하여 저장한다. 
 var locationInput = ChangeLocation(locationInputNum);
+// 입력 값에 따른 일정을 출력하기 위해 입력 값을 문자열로 변환한다. 
 ChangeInput();
 
+// 일정을 출력하는 섹션에서 동적으로 바뀌는 입력 값을 나타낸다.
 var informdtlevel = document.getElementById("inform-dtlevel");
 informdtlevel.innerHTML = distanceLevel;
 var informdate = document.getElementById("inform-date");
@@ -23,11 +28,17 @@ var informvaccine = document.getElementById("inform-vaccine");
 informvaccine.innerHTML = vaccineInput;
 var informsymptoms = document.getElementById("inform-symptoms");
 informsymptoms.innerHTML = symptomsInput;
-console.log(dangerLevel);
+
+// 위험 레벨을 출력하는 함수
 PrintDL(dangerLevel);
+
+// 위험 레벨에 따른 주의문구와 이미지를 출력해주는 함수 
 PrintWarning(dangerLevel);
+
+// 거리두기 단계에 따른 준수 기준을 title로 넣어 마우스를 올렸을 때 설명 메세지가 뜨게한다.
 DistanceLevelInform(distanceLevel)
 
+// 위험레벨에 따른 주의문구와 이미지를 동적으로 출력하는 함수 
 function PrintWarning(level) {
   var dlimg = document.getElementById("DLimage");
   var warnM = document.getElementById("warning");
@@ -53,6 +64,7 @@ function PrintWarning(level) {
   }
 }
 
+// index.js에 저장된 거리두기 단계에 따라 title에 들어갈 준수 기준을 동적으로 넣어 주는 함수
 function DistanceLevelInform(dl) {
   var informdtlevel = document.getElementById("inform-dtlevel");
   switch(dl) {
@@ -74,6 +86,7 @@ function DistanceLevelInform(dl) {
   }
 }
 
+// 위험 레벨에 따라 글자와 색이 동적으로 변하도록 해주는 함수
 function PrintDL(level) {
   var dltext = document.getElementById("inform-dangerlevel");
   switch(level) {
@@ -98,6 +111,7 @@ function PrintDL(level) {
   }
 }
 
+// 입력 값에 따른 일정을 출력하기 위해 입력 값을 문자열로 변환해주는 함수
 function ChangeInput() {
   if (vaccineInput == true) {
     vaccineInput = " 맞으셨습니다."
@@ -113,6 +127,7 @@ function ChangeInput() {
   }
 }
 
+// 받아온 지역 입력 값은 정수이기에 변환 함수를 호출하여 지역 string으로 변환해주는 함수
 function ChangeLocation(lnum) {
   var result;
   switch(lnum) {
@@ -176,6 +191,7 @@ function ChangeLocation(lnum) {
   return result;
 }
 
+//geolocation 객체를 이용하여 사용자의 위치를 위도와 경도로 표시해 준다.
 if (!navigator.geolocation){
   document.getElementById("nowlocation").innerHTML = "지원되지 않습니다."
 }

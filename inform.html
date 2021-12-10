@@ -11,12 +11,15 @@
   <header class="header">
     <div id="header">COVID ALERT</div>
   </header>
+  <!-- 섹션1 : 사용자가 입력한 일정을 표시한다. -->
+  <!-- 이때 표시되는 입력 값은 동적으로 바뀐다. -->
   <section class="section1">
     <div id="SectionTitle">사용자님의 일정</div>
     <hr>
     <div>
       <div class="scheduleInform">
         <p>현재 거리두기 단계는 <span id="inform-dtlevel" title=""></span> 단계 입니다.</p>
+        <!-- 거리두기 단계도 index.js에 저장된 값이 바뀌면 동적으로 바뀐다. -->
         <p>사용자님께서 일정을 수행하는 날짜는 <span id="inform-date"></span> 입니다. </p>
         <p>사용자님께서 일정을 수행하는 지역은 <span id="inform-locate"></span> 입니다. </p>
         <p>사용자님의 일정에 참여하는 인원은 <span id="inform-people"></span>명 입니다. </p>
@@ -27,21 +30,25 @@
     <hr>
     <br>
     <div id="SectionTitle">
+      <!-- 사용자의 위험도 레벨을 표시한다. 이때 입력값에 따라 글자와 색이 동적으로 변한다. -->
       <div>사용자님 일정의 위험도는 <span id="inform-dangerlevel">위험도</span>입니다. </div>
     </div>
     <br>
     <hr>
   </section>
   <br>
+  <!-- 섹션2 : 사용자의 위험 레벨에 따라 서로 다른 이미지와 주의사항 문구가 출력된다. -->
   <section class="section1">
     <div id="SectionTitle">사용자님이 유의하셔야 할 주의사항</div>
       <div class="warningArea">
+        <!-- 이미지와 주의 문구가 동적으로 표시된다.  -->
         <img src="" alt="위험도 이미지 입니다." id="DLimage">
         <div id="warning">
         </div>
       </div>
     <br>
     <hr>
+    <!-- geolocation객체를 이용하여 사용자의 현재위치를 경도와 위도로 표시한다. -->
     <div id="SectionSubTitle">사용자님의 현재위치</div>
     <div id=nowlocation></div>
   </section>
